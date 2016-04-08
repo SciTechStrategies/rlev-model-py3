@@ -20,6 +20,18 @@ To install the Python dependencies:
 
     $ pip install -r requirements.txt
 
+Testing
+-------
+
+To test, just run the included test script:
+
+    $ python test_rlev_model.py
+    .
+    ----------------------------------------------------------------------
+    Ran 1 test in 0.247s
+
+    OK
+
 Running
 -------
 
