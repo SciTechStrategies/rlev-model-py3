@@ -14,12 +14,12 @@ Where a type of `t` denotes a title word feature, and a type of `a` denotes an a
 Installing
 ----------
 
-It may be easiest to run this from a Python virtual environment (https://pypi.python.org/pypi/virtualenv)
+It may be easiest to run this from a Python virtual environment (https://pypi.python.org/pypi/virtualenv) with python 3.
 
 To install the Python dependencies:
 
     $ pip install -r requirements.txt
-    
+
 Running
 -------
 
@@ -30,13 +30,6 @@ included in `data/sample-output.txt`.
 You should be able to run the classifier like this:
 
     $ python rlev_model.py data/sample-data.txt > data/sample-output.txt
-    
+
 Output is written to `stdout` and is tab-delimited text with 5 columns: id, prob1, prob2, prob3, prob4.
 Here prob1 is the probability that the document belongs to research-level 1, and so on.
-
-If you see `UnicodeDecodeError`, you may need to set the `--encoding` parameter to account for the
-input character encoding. For example:
-
-    $ python rlev_model.py filename.txt --encoding=utf-8
-    
-
