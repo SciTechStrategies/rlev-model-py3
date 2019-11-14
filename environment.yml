@@ -1,0 +1,8 @@
+name: rlev-model-py3
+dependencies:
+- python == 3.6.2
+- pip:
+  - click == 7.0
+  - numpy == 1.17.4
+  - scikit-learn == 0.17.1
+  - scipy == 0.17.0
