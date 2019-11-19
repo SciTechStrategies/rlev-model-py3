@@ -20,6 +20,8 @@ To install the Python dependencies:
 
     $ pip install -r requirements.txt
 
+This project also comes with an `environment.yml` file that can be used to create a [Conda](https://docs.conda.io/en/latest/) environment.
+
 Testing
 -------
 
