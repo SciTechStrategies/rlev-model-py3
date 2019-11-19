@@ -6,7 +6,10 @@ import click
 import numpy as np
 import sklearn.linear_model.logistic  # noqa required for loading pickled model
 
-DATA_DIR = "data"
+DATA_DIR = os.path.join(
+    os.path.dirname(os.path.realpath(__file__)),
+    'data',
+)
 PUNCT = '()-:;\'",.{}[]?'
 
 
