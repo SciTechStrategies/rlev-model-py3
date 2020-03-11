@@ -1,4 +1,3 @@
-import csv
 import os
 import pickle
 
@@ -30,6 +29,11 @@ def cli(infile, delimiter, min_features, max_features):
         print(*row, sep=delimiter)
 
 
+def yield_rows(fp, delimiter):
+    for line in fp:
+        yield line.strip().split(delimiter)
+
+
 def yield_probs(fp, delimiter='\t', min_features=2, max_features=None):
     """Yield research level probabilities for a sequence of text.
 
@@ -47,7 +51,7 @@ def yield_probs(fp, delimiter='\t', min_features=2, max_features=None):
     n_features = len(title_features) + len(abstr_features)
     model = unpickle('model')
 
-    rows = csv.reader(fp, delimiter=delimiter)
+    rows = yield_rows(fp, delimiter=delimiter)
     for iden, title, abstr in rows:
         features = np.zeros(n_features)
         features_found = 0
